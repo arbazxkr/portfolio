@@ -1,0 +1,28 @@
+/* Hide default cursor when AI cursor is active */
+body {
+  cursor: none !important;
+}
+
+/* Show default cursor for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Ensure interactive elements work properly with custom cursor */
+a, button, input, textarea, select, [role="button"] {
+  cursor: none !important;
+}
+
+/* Show default cursor for touch devices on interactive elements */
+@media (hover: none) and (pointer: coarse) {
+  a, button, input, textarea, select, [role="button"] {
+    cursor: pointer !important;
+  }
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
