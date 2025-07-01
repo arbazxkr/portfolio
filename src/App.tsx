@@ -213,7 +213,7 @@ function App() {
               { name: 'Flutter', icon: '📱', color: 'from-blue-500 to-cyan-500' },
               { name: 'Firebase', icon: '🔥', color: 'from-orange-500 to-yellow-500' },
               { name: 'GitHub', icon: '🐙', color: 'from-gray-700 to-gray-900' },
-              { name: 'Telegram Bot', icon: '🤖', color: 'from-blue-400 to-blue-600' },
+              { name: 'Bot', icon: '🤖', color: 'from-blue-400 to-blue-600' },
               { name: 'HTML/CSS', icon: '🌐', color: 'from-orange-500 to-pink-500' },
               { name: 'Web3', icon: '⛓️', color: 'from-purple-500 to-pink-500' }
             ].map((skill, index) => (
@@ -257,8 +257,8 @@ function App() {
             {[
               {
                 title: 'BharatGPT',
-                description: 'AI-powered Telegram assistant helping Indian students with resume building, exam support, and government scheme guidance',
-                tech: ['Python', 'AI Models', 'Telegram API', 'Railway'],
+                description: 'AI-powered assistant helping Indian students with resume building, exam support, and government scheme guidance',
+                tech: ['Python', 'AI Models', 'API', 'Railway'],
                 image: '🤖',
                 color: 'from-green-500 to-emerald-500',
                 status: 'Live & Deployed'
@@ -273,8 +273,8 @@ function App() {
               },
               {
                 title: 'MemeFun India',
-                description: 'Token launchpad for Indian meme coins with Telegram alerts, VIP access, and wallet integration (In Development)',
-                tech: ['Web3', 'Blockchain', 'Telegram Bot', 'Smart Contracts'],
+                description: 'Token launchpad for Indian meme coins with alerts, VIP access, and wallet integration (In Development)',
+                tech: ['Web3', 'Blockchain', 'Bot', 'Smart Contracts'],
                 image: '🚀',
                 color: 'from-cyan-500 to-blue-500',
                 status: 'In Development'
@@ -304,13 +304,26 @@ function App() {
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-cyan-400 font-semibold">{project.status}</span>
                 </div>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white py-2 rounded-lg transition-all duration-300"
-                >
-                  View Project
-                </motion.button>
+                {project.title === 'BharatGPT' && (
+                  <a
+                    href="https://bharatxkr.netlify.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full mt-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white py-2 rounded-lg text-center font-semibold transition-all duration-300"
+                  >
+                    Visit BharatGPT Web
+                  </a>
+                )}
+                {project.title === 'LinkHub' && (
+                  <a
+                    href="https://radarhub.netlify.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full mt-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-2 rounded-lg text-center font-semibold transition-all duration-300"
+                  >
+                    Visit RadarHub Web
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>
